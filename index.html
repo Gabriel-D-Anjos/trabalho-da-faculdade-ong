@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ONG Exemplo — Página Inicial</title>
+  <meta name="description" content="ONG Exemplo — missão, valores e projetos sociais. Saiba como colaborar e se envolver.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="index.html">ONG Exemplo</a>
+      <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav" class="menu-btn">Menu</button>
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro / Voluntariado</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container" role="main">
+    <section aria-labelledby="missao">
+      <h1 id="missao">Nossa Missão</h1>
+      <p>Promover impacto social por meio de projetos comunitários, voluntariado e transparência nas ações.</p>
+    </section>
+
+    <section aria-labelledby="valores" class="cards">
+      <h2 id="valores">Visão e Valores</h2>
+      <article>
+        <h3>Visão</h3>
+        <p>Ser referência em iniciativas sociais que transformam vidas.</p>
+      </article>
+      <article>
+        <h3>Valores</h3>
+        <p>Transparência, inclusão, respeito e colaboração.</p>
+      </article>
+      <article>
+        <h3>Histórico</h3>
+        <p>Mais de 10 anos atuando em comunidades locais.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="destaques">
+      <h2 id="destaques">Destaques</h2>
+      <ul class="project-list">
+        <li>
+          <img src="assets/project1.jpg" alt="Voluntários distribuindo cestas" loading="lazy" width="350" height="auto">
+          <h3>Projeto Alimentar</h3>
+          <p>Distribuição de cestas básicas e oficinas nutricionais.</p>
+        </li>
+        <li>
+          <img src="assets/project2.jpg" alt="Crianças em atividade educacional" loading="lazy" width="600" height="400">
+          <h3>Educação Comunitária</h3>
+          <p>Apoio escolar e reforço pedagógico para crianças.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contato" aria-labelledby="contato-title">
+      <h2 id="contato-title">Contato</h2>
+      <p>Telefone: <a href="tel:+5511999999999">+55 (11) 99999-9999</a></p>
+      <p>Email: <a href="mailto:contato@ongexemplo.org">contato@ongexemplo.org</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> ONG Exemplo — Todos os direitos reservados.</p>
+      <p><a href="projetos.html">Projetos</a> · <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js" defer></script>
+</body>
+</html>

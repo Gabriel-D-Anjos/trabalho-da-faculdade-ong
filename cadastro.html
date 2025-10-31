@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro — Voluntariado & Doações</title>
+  <meta name="description" content="Formulário de cadastro para voluntariado e doadores. Campos com validação HTML5 e máscaras para CPF, telefone e CEP.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="index.html">ONG Exemplo</a>
+      <button id="menu-toggle-3" aria-expanded="false" aria-controls="main-nav-3" class="menu-btn">Menu</button>
+      <nav id="main-nav-3" class="main-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <h1>Cadastro de Voluntário / Doador</h1>
+    <p>Preencha os dados abaixo. Campos marcados com * são obrigatórios.</p>
+
+    <form id="cadastroForm" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label for="nome">Nome completo *</label>
+        <input id="nome" name="nome" type="text" required minlength="2" maxlength="100" aria-required="true">
+
+        <label for="email">E‑mail *</label>
+        <input id="email" name="email" type="email" required aria-required="true">
+
+        <label for="cpf">CPF *</label>
+        <input id="cpf" name="cpf" inputmode="numeric" type="text" required aria-required="true" maxlength="14" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+
+        <label for="telefone">Telefone *</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" required maxlength="15" placeholder="(00) 00000-0000">
+
+        <label for="dataNasc">Data de Nascimento *</label>
+        <input id="dataNasc" name="dataNasc" type="date" required>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="cep">CEP *</label>
+        <input id="cep" name="cep" type="text" inputmode="numeric" required maxlength="9" placeholder="00000-000" pattern="\d{5}-?\d{3}">
+
+        <label for="endereco">Endereço *</label>
+        <input id="endereco" name="endereco" type="text" required>
+
+        <label for="cidade">Cidade *</label>
+        <input id="cidade" name="cidade" type="text" required>
+
+        <label for="estado">Estado *</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione...</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+          <option value="MG">MG</option>
+          <option value="OUTRO">Outro</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interesse</legend>
+
+        <label for="tipo">Gostaria de se cadastrar como:</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione...</option>
+          <option value="voluntario">Voluntário</option>
+          <option value="doador">Doador / apoiador</option>
+        </select>
+
+        <label for="areas">Áreas de interesse (segure Ctrl para múltipla seleção)</label>
+        <select id="areas" name="areas" multiple size="4">
+          <option value="alimentacao">Alimentação</option>
+          <option value="educacao">Educação</option>
+          <option value="saude">Saúde</option>
+          <option value="meioambiente">Meio Ambiente</option>
+        </select>
+
+        <label for="bio">Compartilhe sua experiência (opcional)</label>
+        <textarea id="bio" name="bio" rows="4" maxlength="1000" placeholder="Conte um pouco sobre sua experiência..."></textarea>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Enviar cadastro</button>
+        <button type="reset">Limpar</button>
+      </div>
+
+      <p class="note">Após o envio, você receberá um email com confirmação e informações de próximos passos.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year-3"></span> ONG Exemplo</p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js" defer></script>
+</body>
+</html>
